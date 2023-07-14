@@ -1,0 +1,226 @@
+﻿@model IEnumerable<APEDI.Models.ProspectoModel>
+
+@{
+    ViewData["Title"] = "Lista Prospectos";
+}
+
+
+<h1>Prospectos</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCodigoEvento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtroProfesional)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombresCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreIdentatario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaExpedición)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LibretaMilitar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Barrio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DireccionResidencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacto1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacto2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdOrientacionSexual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoblacionMigrante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TituloEstudioApostillado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTituloApostillado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PermisoTrabajo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConoceTramite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JefeHogar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonasDependenEconomicamente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TieneHijos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TienePersonasAcargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicenciaConduccionCarro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicenciaConduccionMoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExperienciaLaboral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltimaExperienciaLaboral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentosCertificanExperiencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContinuarProcesoOrientacion)
+            </th>
+        
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreación)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaModificación)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCodigoEvento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtroProfesional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroIdentificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombresCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreIdentatario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaExpedición)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LibretaMilitar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barrio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DireccionResidencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOrientacionSexual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoblacionMigrante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TituloEstudioApostillado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTituloApostillado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PermisoTrabajo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConoceTramite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JefeHogar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonasDependenEconomicamente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieneHijos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TienePersonasAcargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicenciaConduccionCarro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicenciaConduccionMoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExperienciaLaboral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimaExperienciaLaboral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentosCertificanExperiencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContinuarProcesoOrientacion)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreación)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaModificación)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProspecto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NumeroIdentificacion">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProspecto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
