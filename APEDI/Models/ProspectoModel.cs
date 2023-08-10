@@ -1,9 +1,13 @@
-﻿namespace APEDI.Models
+﻿using System.ComponentModel;
+
+namespace APEDI.Models
 {
     public class ProspectoModel
     {
+
         public int IdProspecto { get; set; }
 
+        [DisplayName("Fecha Registro")]
         public DateTime FechaRegistro { get; set; }
 
         public int IdTipoRegistro { get; set; }

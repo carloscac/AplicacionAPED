@@ -12,5 +12,9 @@ namespace AccesoDatos.Repositorio
         List<BasePoliticaPublica> ListaBasePolitica();
         List<CertificadoPoblacional> ListaCertificadoPoblacional();
         List<Prospecto> ListaProspectos();
+
+        List<TipoRegistro> ListaTipoRegistro();
+        List<FuenteAtencion> ListaTipoFuente();
+        List<ModoAtencion> ListaModoAtencion();
     }
 }

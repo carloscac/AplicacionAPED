@@ -87,6 +87,21 @@ namespace AccesoDatos.Repositorio
             return _contexto.CertificadoPoblacionals.Where(e => e.IdEst == 1).ToList();
         }
 
+        public List<TipoRegistro> ListaTipoRegistro()
+        {
+            return _contexto.TipoRegistros.ToList();
+        }
+
+        public List<FuenteAtencion> ListaTipoFuente()
+        {
+            return _contexto.FuenteAtencions.Where(e=> e.IdEst == 1).ToList();
+        }
+
+        public List<ModoAtencion> ListaModoAtencion()
+        {
+            return _contexto.ModoAtencions.Where(e=> e.IdEst == 1).ToList();
+        }
+
         #endregion
 
 

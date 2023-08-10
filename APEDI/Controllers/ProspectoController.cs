@@ -4,6 +4,7 @@ using APEDI.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace APEDI.Controllers
 {
@@ -55,6 +56,41 @@ namespace APEDI.Controllers
         // GET: ProspectoController/Create
         public ActionResult Create()
         {
+            var listaTipoRegistro = _repositorioAplicacion.ListaTipoRegistro();
+
+            List<SelectListItem> selectListItem = new List<SelectListItem>();
+            selectListItem.Add(new SelectListItem { Text = "Seleccione un tipo", Value = "0", Selected = true });
+            foreach (var item in listaTipoRegistro)
+            {
+                selectListItem.Add(new SelectListItem { Text = item.TipRegNombre, Value = item.IdTipoRegistro.ToString() });
+            }
+            ViewBag.IdTipoRegistro = selectListItem;
+
+            var listaTipoFuente = _repositorioAplicacion.ListaTipoFuente();
+            List<SelectListItem> listFuente = new List<SelectListItem>();
+            listFuente.Add(new SelectListItem { Text = "Seleccione el tipo de fuente", Value = "0", Selected = true });
+            foreach (var item in listaTipoFuente)
+            {
+                listFuente.Add(new SelectListItem { Text = item.FueAteNombre, Value = item.IdFuenteAtencion.ToString() });
+            }
+            ViewBag.IdFuente = listFuente;
+
+            var listaPoliticas = _repositorioAplicacion.ListaBasePolitica();
+            List<SelectListItem> listaPoliticasP = new List<SelectListItem>();
+            listaPoliticasP.Add(new SelectListItem { Text = "Seleccione una politica", Value = "0", Selected = true });
+            foreach (var item in listaPoliticas)
+            {
+                listaPoliticasP.Add(new SelectListItem { Text = item.BasPolPubNombre, Value = item.IdBasePoliticaPublica.ToString(),});
+            }
+            ViewBag.IdBasesPoliticasPublicas = listaPoliticasP;
+            var listModoAtencion = _repositorioAplicacion.ListaModoAtencion();
+            List<SelectListItem> listMod = new List<SelectListItem>();
+            listMod.Add(new SelectListItem { Text = "Seleccione un modo de atención", Value = "0", Selected = true });
+            foreach (var item in listModoAtencion)
+            {
+                listMod.Add(new SelectListItem { Text = item.ModAteNombre, Value = item.IdModoAtencion.ToString()});
+            }
+            ViewBag.IdModoAtencion = listMod;
             return View();
         }
 
