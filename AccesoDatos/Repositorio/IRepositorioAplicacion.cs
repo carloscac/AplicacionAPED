@@ -16,5 +16,6 @@ namespace AccesoDatos.Repositorio
         List<TipoRegistro> ListaTipoRegistro();
         List<FuenteAtencion> ListaTipoFuente();
         List<ModoAtencion> ListaModoAtencion();
+        List<ProfesionalRegistro> ListaProfesional();
     }
 }

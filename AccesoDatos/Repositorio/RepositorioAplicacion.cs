@@ -102,6 +102,11 @@ namespace AccesoDatos.Repositorio
             return _contexto.ModoAtencions.Where(e=> e.IdEst == 1).ToList();
         }
 
+        public List<ProfesionalRegistro> ListaProfesional()
+        {
+            return _contexto.ProfesionalRegistros.Where(e=> e.IdEst == 1).ToList(); 
+        }
+
         #endregion
 
 

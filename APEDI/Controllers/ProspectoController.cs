@@ -91,6 +91,14 @@ namespace APEDI.Controllers
                 listMod.Add(new SelectListItem { Text = item.ModAteNombre, Value = item.IdModoAtencion.ToString()});
             }
             ViewBag.IdModoAtencion = listMod;
+            var listProfesional = _repositorioAplicacion.ListaProfesional();
+            List<SelectListItem> listProf = new List<SelectListItem>();
+            listProf.Add(new SelectListItem { Text = "Seleccione un profesional", Value = "0", Selected = true });
+            foreach (var item in listProfesional)
+            {
+                listProf.Add(new SelectListItem { Text = item.ProRegNombre, Value = item.IdProfesionalRegistro.ToString()});
+            }
+            ViewBag.IdProfesionalRegistro = listProf;
             return View();
         }
 
