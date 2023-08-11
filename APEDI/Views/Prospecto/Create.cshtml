@@ -165,8 +165,9 @@
                 </div>
                 <div class="col-md-4">
                     <label asp-for="IdOrientacionSexual" class="control-label">Orientación sexual</label>
-                    <input asp-for="IdOrientacionSexual" class="form-control" />
-                    <span asp-validation-for="IdOrientacionSexual" class="text-danger"></span>
+                    <select asp-for="IdOrientacionSexual" class="form-control" asp-items="ViewBag.IdOrientacionSexual"></select>
+                    @*<input asp-for="IdOrientacionSexual" class="form-control" />
+                    <span asp-validation-for="IdOrientacionSexual" class="text-danger"></span>*@
                 </div>
             </div>
 

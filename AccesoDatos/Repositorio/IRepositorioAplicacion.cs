@@ -24,5 +24,13 @@ namespace AccesoDatos.Repositorio
         List<Localidad> ListaLocalidad();
         List<TipoZona> ListaTipoZona();
         List<IdentidadGenero> ListaIdentidadGenero();
+
+        List<OrientacionSexual> ListaOrientacionSexual();
+
+        List<EstadoCivil> ListaEstadoCivil();
+        List<Nacionalidad> ListaNacionalidad();
+        List<GrupoEtnico> ListaGrupoEtnico();
+        List<TipoPoblacion> ListaTipoPoblacion();
+        List<CondicionDiscapacidad> ListaCondicionDiscapacidad();
     }
 }
