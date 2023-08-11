@@ -80,7 +80,7 @@ namespace APEDI.Controllers
             listaPoliticasP.Add(new SelectListItem { Text = "Seleccione una politica", Value = "0", Selected = true });
             foreach (var item in listaPoliticas)
             {
-                listaPoliticasP.Add(new SelectListItem { Text = item.BasPolPubNombre, Value = item.IdBasePoliticaPublica.ToString(),});
+                listaPoliticasP.Add(new SelectListItem { Text = item.BasPolPubNombre, Value = item.IdBasePoliticaPublica.ToString(), });
             }
             ViewBag.IdBasesPoliticasPublicas = listaPoliticasP;
             var listModoAtencion = _repositorioAplicacion.ListaModoAtencion();
@@ -88,7 +88,7 @@ namespace APEDI.Controllers
             listMod.Add(new SelectListItem { Text = "Seleccione un modo de atención", Value = "0", Selected = true });
             foreach (var item in listModoAtencion)
             {
-                listMod.Add(new SelectListItem { Text = item.ModAteNombre, Value = item.IdModoAtencion.ToString()});
+                listMod.Add(new SelectListItem { Text = item.ModAteNombre, Value = item.IdModoAtencion.ToString() });
             }
             ViewBag.IdModoAtencion = listMod;
             var listProfesional = _repositorioAplicacion.ListaProfesional();
@@ -96,9 +96,66 @@ namespace APEDI.Controllers
             listProf.Add(new SelectListItem { Text = "Seleccione un profesional", Value = "0", Selected = true });
             foreach (var item in listProfesional)
             {
-                listProf.Add(new SelectListItem { Text = item.ProRegNombre, Value = item.IdProfesionalRegistro.ToString()});
+                listProf.Add(new SelectListItem { Text = item.ProRegNombre, Value = item.IdProfesionalRegistro.ToString() });
             }
             ViewBag.IdProfesionalRegistro = listProf;
+
+            var ListTipDoc = _repositorioAplicacion.ListaTipoDoc();
+            List<SelectListItem> listTip = new List<SelectListItem>();
+            listTip.Add(new SelectListItem { Text = "Seleccione un tipo de documento", Value = "0", Selected = true });
+            foreach (var item in ListTipDoc)
+            {
+                listTip.Add(new SelectListItem { Text = item.TipDocNombre, Value = item.IdTipoDocumento.ToString() });
+            }
+            ViewBag.IdTipoDocumento = listTip;
+
+            var ListCiudad = _repositorioAplicacion.ListaCiudad();
+            List<SelectListItem> ListCiu = new List<SelectListItem>();
+            ListCiu.Add(new SelectListItem { Text = "Seleccione una ciudad", Value = "0", Selected = true });
+            foreach (var item in ListCiudad)
+            {
+                ListCiu.Add(new SelectListItem { Text = item.CiuNombre, Value = item.IdCiudad.ToString() });
+            }
+            ViewBag.IdCiudadExpedicion = ListCiu;
+            ViewBag.IdCiudadResidencia = ListCiu;
+
+            var ListSexo = _repositorioAplicacion.ListaSexo();
+            List<SelectListItem> ListSex = new List<SelectListItem>();
+            ListSex.Add(new SelectListItem { Text = "Seleccione sexo", Value = "0", Selected = true });
+            foreach (var item in ListSexo)
+            {
+                ListSex.Add(new SelectListItem { Text = item.SexNombre, Value = item.IdSexo.ToString() });
+            }
+            ViewBag.IdSexo = ListSex;
+
+            var listaLocalidad = _repositorioAplicacion.ListaLocalidad();
+            List<SelectListItem> lisLocal = new List<SelectListItem>();
+            lisLocal.Add(new SelectListItem { Text = "Seleccione una localidad", Value = "0", Selected = true });
+            foreach (var item in listaLocalidad)
+            {
+                lisLocal.Add(new SelectListItem { Text = item.LocNombre, Value = item.IdLocalidad.ToString() });
+            }
+            ViewBag.IdLocalidad = lisLocal;
+
+            var listaTipoZona = _repositorioAplicacion.ListaTipoZona();
+            List<SelectListItem> listTipZon = new List<SelectListItem>();
+            listTipZon.Add(new SelectListItem { Text = "Seleccione el tipo de zona", Value = "0", Selected = true });
+            foreach (var item in listaTipoZona)
+            {
+                listTipZon.Add(new SelectListItem { Text = item.TipZonNombre, Value = item.IdTipoZona.ToString() });
+            }
+            ViewBag.IdTipoZona = listTipZon;
+
+            var listaTipoGenero = _repositorioAplicacion.ListaIdentidadGenero();
+            var listaIdentidad = new List<SelectListItem>();
+            listaIdentidad.Add(new SelectListItem { Text = "Seleccione su identidad de genero", Value = "0", Selected = true });
+            foreach (var item in listaTipoGenero)
+            {
+                listaIdentidad.Add(new SelectListItem { Text = item.IdeGenNombre, Value = item.IdIdentidadGenero.ToString() });
+            }
+
+            ViewBag.IdIdentidadGenero = listaIdentidad;
+
             return View();
         }
 

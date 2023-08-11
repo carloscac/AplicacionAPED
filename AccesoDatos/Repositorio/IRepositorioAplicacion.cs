@@ -17,5 +17,12 @@ namespace AccesoDatos.Repositorio
         List<FuenteAtencion> ListaTipoFuente();
         List<ModoAtencion> ListaModoAtencion();
         List<ProfesionalRegistro> ListaProfesional();
+        List<TipoDocumento> ListaTipoDoc();
+
+        List<Ciudad> ListaCiudad();
+        List<Sexo> ListaSexo();
+        List<Localidad> ListaLocalidad();
+        List<TipoZona> ListaTipoZona();
+        List<IdentidadGenero> ListaIdentidadGenero();
     }
 }

@@ -107,6 +107,36 @@ namespace AccesoDatos.Repositorio
             return _contexto.ProfesionalRegistros.Where(e=> e.IdEst == 1).ToList(); 
         }
 
+        public List<TipoDocumento> ListaTipoDoc()
+        { 
+        return _contexto.TipoDocumentos.Where(e=> e.IdEst == 1).ToList();
+        }
+
+        public List<Ciudad> ListaCiudad()
+        {
+            return _contexto.Ciudads.Where(e=> e.IdEst == 1).ToList();  
+        }
+
+        public List<Sexo> ListaSexo()
+        {
+            return _contexto.Sexos.Where(e=> e.IdEst == 1).ToList();    
+        }
+
+        public List<Localidad> ListaLocalidad()
+        {
+            return _contexto.Localidads.Where(e=> e.IdEst == 1).ToList();
+        }
+
+        public List<TipoZona> ListaTipoZona()
+        {
+            return _contexto.TipoZonas.Where(e=> e.IdTipoZona == 1).ToList();
+        }
+
+        public List<IdentidadGenero> ListaIdentidadGenero()
+        {
+            return _contexto.IdentidadGeneros.Where(e => e.IdEst == 1).ToList();
+        }
+
         #endregion
 
 
