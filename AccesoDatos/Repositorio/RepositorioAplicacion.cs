@@ -3,6 +3,8 @@ using AccesoDatos.Models;
 using Dominio.ModelosDominio;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AccesoDatos.Repositorio
 {
@@ -136,6 +138,15 @@ namespace AccesoDatos.Repositorio
         {
             return _contexto.IdentidadGeneros.Where(e => e.IdEst == 1).ToList();
         }
+
+
+        public List<MotivoNoContinua> ListaMotivoNoContinua()
+        {
+            return _contexto.MotivoNoContinuas.Where(e => e.IdEst == 1).ToList();
+        }
+
+
+
 
         #endregion
 

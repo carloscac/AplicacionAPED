@@ -1,4 +1,5 @@
 ﻿using AccesoDatos.Models;
+using System.Collections.Generic;
 
 namespace AccesoDatos.Repositorio
 {
@@ -24,5 +25,8 @@ namespace AccesoDatos.Repositorio
         List<Localidad> ListaLocalidad();
         List<TipoZona> ListaTipoZona();
         List<IdentidadGenero> ListaIdentidadGenero();
+        List<MotivoNoContinua> ListaMotivoNoContinua();
+
+
     }
 }
