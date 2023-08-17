@@ -156,6 +156,70 @@ namespace APEDI.Controllers
 
             ViewBag.IdIdentidadGenero = listaIdentidad;
 
+            var listaOrientacion = _repositorioAplicacion.ListaOrientacionSexual();
+            var lisOrientacion = new List<SelectListItem>();
+            lisOrientacion.Add(new SelectListItem { Text = "Seleccione su orientación sexual", Value = "0", Selected = true });
+            foreach (var item in listaOrientacion)
+            {
+                lisOrientacion.Add(new SelectListItem { Text = item.OriSexNombre, Value = item.IdOrientacionSexual.ToString() });
+            }
+
+            ViewBag.IdOrientacionSexual = lisOrientacion;
+
+            var listaEstadoCivil = _repositorioAplicacion.ListaEstadoCivil();
+            var ListEstCiv = new List<SelectListItem>();
+            ListEstCiv.Add(new SelectListItem { Text = "Seleccione su estado civil", Value = "0", Selected = true });
+            foreach (var item in listaEstadoCivil)
+            {
+                ListEstCiv.Add(new SelectListItem { Text = item.EstCivNombre, Value = item.IdEstadoCivil.ToString() });
+            }
+            ViewBag.IdEstadoCivil = ListEstCiv;
+
+            var listaNacionalidad = _repositorioAplicacion.ListaNacionalidad();
+            var ListNac = new List<SelectListItem>();
+            ListNac.Add(new SelectListItem { Text = "Seleccione su nacionalidad", Value = "0", Selected = true });
+            foreach (var item in listaNacionalidad)
+            {
+                ListNac.Add(new SelectListItem { Text = item.NacNombre, Value = item.IdNacionalidad.ToString() });
+            }
+            ViewBag.IdNacionalidad = ListNac;
+
+            var ListaGrupoEtnico = _repositorioAplicacion.ListaGrupoEtnico();
+            var ListGruEtn = new List<SelectListItem>();
+            ListGruEtn.Add(new SelectListItem { Text = "Seleccione su grupo etnico", Value = "0", Selected = true });
+            foreach (var item in ListaGrupoEtnico)
+            {
+                ListGruEtn.Add(new SelectListItem { Text = item.GruEtnNombre, Value = item.IdGrupoEtnico.ToString() });
+            }
+            ViewBag.IdGrupoEtnico = ListGruEtn;
+
+            var ListaTipoPoblacion = _repositorioAplicacion.ListaTipoPoblacion();
+            var ListTipPob = new List<SelectListItem>();
+            ListTipPob.Add(new SelectListItem { Text = "Seleccione su tipo de población", Value = "0", Selected = true });
+            foreach (var item in ListaTipoPoblacion)
+            {
+                ListTipPob.Add(new SelectListItem { Text = item.TipPobNombre, Value = item.IdTipoPoblacion.ToString() });
+            }
+            ViewBag.IdTipoPoblacion = ListTipPob;
+
+            var ListaTipoDiscapacidad = _repositorioAplicacion.ListaCondicionDiscapacidad();
+            var ListTipDes = new List<SelectListItem>();
+            ListTipDes.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
+            foreach (var item in ListaTipoDiscapacidad)
+            {
+                ListTipDes.Add(new SelectListItem { Text = item.ConDisNombre, Value = item.IdCondicionDiscapacidad.ToString() });
+            }
+            ViewBag.IdCondicionDiscapacidad = ListTipDes;
+
+            var ListaCertificadoPoblacional = _repositorioAplicacion.ListaCertificadoPoblacional();
+            var ListCerPonb = new List<SelectListItem>();
+            ListTipDes.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
+            foreach (var item in ListaTipoDiscapacidad)
+            {
+                ListTipDes.Add(new SelectListItem { Text = item.ConDisNombre, Value = item.IdCondicionDiscapacidad.ToString() });
+            }
+            ViewBag.IdCondicionDiscapacidad = ListTipDes;
+
             return View();
         }
 

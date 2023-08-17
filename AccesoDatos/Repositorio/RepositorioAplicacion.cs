@@ -37,7 +37,7 @@ namespace AccesoDatos.Repositorio
         {
             Prospecto prospecto = _contexto.Prospectos.Where(e => e.NumeroIdentificacion == idDocumento).FirstOrDefault();
 
-    
+
 
             var consulta = _contexto.Database.SqlQueryRaw<ProspectoDTO>("PA_ConsutarProspectoPorIdentificacion @Identificacion",
                 new SqlParameter("@Identificacion", idDocumento));
@@ -96,42 +96,42 @@ namespace AccesoDatos.Repositorio
 
         public List<FuenteAtencion> ListaTipoFuente()
         {
-            return _contexto.FuenteAtencions.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.FuenteAtencions.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<ModoAtencion> ListaModoAtencion()
         {
-            return _contexto.ModoAtencions.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.ModoAtencions.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<ProfesionalRegistro> ListaProfesional()
         {
-            return _contexto.ProfesionalRegistros.Where(e=> e.IdEst == 1).ToList(); 
+            return _contexto.ProfesionalRegistros.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<TipoDocumento> ListaTipoDoc()
-        { 
-        return _contexto.TipoDocumentos.Where(e=> e.IdEst == 1).ToList();
+        {
+            return _contexto.TipoDocumentos.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<Ciudad> ListaCiudad()
         {
-            return _contexto.Ciudads.Where(e=> e.IdEst == 1).ToList();  
+            return _contexto.Ciudads.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<Sexo> ListaSexo()
         {
-            return _contexto.Sexos.Where(e=> e.IdEst == 1).ToList();    
+            return _contexto.Sexos.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<Localidad> ListaLocalidad()
         {
-            return _contexto.Localidads.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.Localidads.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<TipoZona> ListaTipoZona()
         {
-            return _contexto.TipoZonas.Where(e=> e.IdTipoZona == 1).ToList();
+            return _contexto.TipoZonas.Where(e => e.IdTipoZona == 1).ToList();
         }
 
         public List<IdentidadGenero> ListaIdentidadGenero()
@@ -139,6 +139,40 @@ namespace AccesoDatos.Repositorio
             return _contexto.IdentidadGeneros.Where(e => e.IdEst == 1).ToList();
         }
 
+        public List<OrientacionSexual> ListaOrientacionSexual()
+        {
+            return _contexto.OrientacionSexuals.Where(e=> e.IdEst == 1).ToList();   
+        }
+
+        public List<EstadoCivil> ListaEstadoCivil()
+        {
+            return _contexto.EstadoCivils.Where(e=> e.IdEst != 1).ToList(); 
+        }
+
+        public List<Nacionalidad> ListaNacionalidad()
+        {
+            return _contexto.Nacionalidads.Where(e=> e.IdEst == 1).ToList();
+        }
+
+        public List<GrupoEtnico> ListaGrupoEtnico()
+        {
+            return _contexto.GrupoEtnicos.Where(e=> e.IdEst == 1).ToList();
+        }
+        
+        public List<TipoPoblacion> ListaTipoPoblacion()
+        {
+            return _contexto.TipoPoblacions.Where(e=> e.IdEst == 1).ToList();
+        }
+
+        public List<CondicionDiscapacidad> ListaCondicionDiscapacidad()
+        {
+            return _contexto.CondicionDiscapacidads.Where(e => e.IdEst == 1).ToList();
+        }
+
+        public List<CertificadoPoblacional> ListaCertificadoPoblacional()
+        {
+            return _contexto.CertificadoPoblacionals.Where(e=> e.IdEst == 1).ToList();
+        }
 
         public List<MotivoNoContinua> ListaMotivoNoContinua()
         {
