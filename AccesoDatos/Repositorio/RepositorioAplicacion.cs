@@ -139,27 +139,27 @@ namespace AccesoDatos.Repositorio
 
         public List<OrientacionSexual> ListaOrientacionSexual()
         {
-            return _contexto.OrientacionSexuals.Where(e=> e.IdEst == 1).ToList();   
+            return _contexto.OrientacionSexuals.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<EstadoCivil> ListaEstadoCivil()
         {
-            return _contexto.EstadoCivils.Where(e=> e.IdEst != 1).ToList(); 
+            return _contexto.EstadoCivils.Where(e => e.IdEst != 1).ToList();
         }
 
         public List<Nacionalidad> ListaNacionalidad()
         {
-            return _contexto.Nacionalidads.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.Nacionalidads.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<GrupoEtnico> ListaGrupoEtnico()
         {
-            return _contexto.GrupoEtnicos.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.GrupoEtnicos.Where(e => e.IdEst == 1).ToList();
         }
-        
+
         public List<TipoPoblacion> ListaTipoPoblacion()
         {
-            return _contexto.TipoPoblacions.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.TipoPoblacions.Where(e => e.IdEst == 1).ToList();
         }
 
         public List<CondicionDiscapacidad> ListaCondicionDiscapacidad()
@@ -167,10 +167,16 @@ namespace AccesoDatos.Repositorio
             return _contexto.CondicionDiscapacidads.Where(e => e.IdEst == 1).ToList();
         }
 
-        public List<CertificadoPoblacional> ListaCertificadoPoblacional()
+        public List<TipoPermisoTrabajo> ListaTipoPermisoTrabajo()
         {
-            return _contexto.CertificadoPoblacionals.Where(e=> e.IdEst == 1).ToList();
+            return _contexto.TipoPermisoTrabajos.Where(e => e.IdEst == 1).ToList();
         }
+
+        public List<TipoPersonaCuidado> ListoTipoPersonaCuidado()
+        {
+            return _contexto.TipoPersonaCuidados.Where(e => e.IdEst == 1).ToList();
+        }
+
         #endregion
 
 

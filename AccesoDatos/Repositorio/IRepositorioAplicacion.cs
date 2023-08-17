@@ -32,5 +32,8 @@ namespace AccesoDatos.Repositorio
         List<GrupoEtnico> ListaGrupoEtnico();
         List<TipoPoblacion> ListaTipoPoblacion();
         List<CondicionDiscapacidad> ListaCondicionDiscapacidad();
+        List<TipoPermisoTrabajo> ListaTipoPermisoTrabajo();
+
+        List<TipoPersonaCuidado> ListoTipoPersonaCuidado();
     }
 }

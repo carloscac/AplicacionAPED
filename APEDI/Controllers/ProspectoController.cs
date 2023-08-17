@@ -213,12 +213,30 @@ namespace APEDI.Controllers
 
             var ListaCertificadoPoblacional = _repositorioAplicacion.ListaCertificadoPoblacional();
             var ListCerPonb = new List<SelectListItem>();
-            ListTipDes.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
-            foreach (var item in ListaTipoDiscapacidad)
+            ListCerPonb.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
+            foreach (var item in ListaCertificadoPoblacional)
             {
-                ListTipDes.Add(new SelectListItem { Text = item.ConDisNombre, Value = item.IdCondicionDiscapacidad.ToString() });
+                ListCerPonb.Add(new SelectListItem { Text = item.CerPobNombre, Value = item.IdCertificadoPoblacional.ToString() });
             }
-            ViewBag.IdCondicionDiscapacidad = ListTipDes;
+            ViewBag.IdCertificadoPoblacional = ListCerPonb;
+
+            var ListaTipoPermisoTrabajo = _repositorioAplicacion.ListaTipoPermisoTrabajo();
+            var ListTipPer = new List<SelectListItem>();
+            ListTipPer.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
+            foreach (var item in ListaTipoPermisoTrabajo)
+            {
+                ListTipPer.Add(new SelectListItem { Text = item.TipPerTraNombre, Value = item.IdTipoPermisoTrabajo.ToString() });
+            }
+            ViewBag.IdTipoPermisoTrabajo = ListTipPer;
+
+            var ListoTipoPersonaCuidado = _repositorioAplicacion.ListoTipoPersonaCuidado();
+            var ListTipPerCui = new List<SelectListItem>();
+            ListTipPerCui.Add(new SelectListItem { Text = "Seleccione condicion discapacidad", Value = "0", Selected = true });
+            foreach (var item in ListoTipoPersonaCuidado)
+            {
+                ListTipPerCui.Add(new SelectListItem { Text = item.TipPerCuiNombre, Value = item.IdTipoPersonaCuidado.ToString() });
+            }
+            ViewBag.IdTipoPersonaCuidado = ListTipPerCui;
 
             return View();
         }
