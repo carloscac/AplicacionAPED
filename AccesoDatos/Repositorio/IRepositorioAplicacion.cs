@@ -1,4 +1,5 @@
 ﻿using AccesoDatos.Models;
+using System.Collections.Generic;
 
 namespace AccesoDatos.Repositorio
 {
@@ -32,6 +33,9 @@ namespace AccesoDatos.Repositorio
         List<GrupoEtnico> ListaGrupoEtnico();
         List<TipoPoblacion> ListaTipoPoblacion();
         List<CondicionDiscapacidad> ListaCondicionDiscapacidad();
+        List<MotivoNoContinua> ListaMotivoNoContinua();
+
+
         List<TipoPermisoTrabajo> ListaTipoPermisoTrabajo();
 
         List<TipoPersonaCuidado> ListoTipoPersonaCuidado();

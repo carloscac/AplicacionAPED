@@ -1,4 +1,5 @@
 ﻿using Dominio.ModelosDominio;
+using System.Collections.Generic;
 
 namespace AccesoDatos.Repositorio
 {
